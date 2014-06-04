@@ -15,7 +15,7 @@ Admin can manage Mall Price informations.
 ![Malls](https://raw.githubusercontent.com/wiki/digitalm/spree_malls/images/malls4.jpg)
 
 Be sure to create Mall list before manage.
-![Malls](https://raw.githubusercontent.com/wiki/digitalm/spree_malls/images/malls4.jpg)
+![Malls](https://raw.githubusercontent.com/wiki/digitalm/spree_malls/images/malls1.jpg)
 
 Dependency
 ------------

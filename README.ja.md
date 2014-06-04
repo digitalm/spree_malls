@@ -15,7 +15,7 @@ Purpose
 ![Malls](https://raw.githubusercontent.com/wiki/digitalm/spree_malls/images/malls4.jpg)
 
 モールの登録
-![Malls](https://raw.githubusercontent.com/wiki/digitalm/spree_malls/images/malls4.jpg)
+![Malls](https://raw.githubusercontent.com/wiki/digitalm/spree_malls/images/malls1.jpg)
 
 依存関係
 ------------
