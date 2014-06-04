@@ -1,0 +1,11 @@
+<% content_for :page_title do %>
+  <%= t("add_on.edit_mall") %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <li>
+    <%= button_link_to t("add_on.back_to_malls_list"), admin_add_on_malls_path, :icon => 'icon-arrow-left' %>
+  </li>  
+<% end %>
+
+<%= render :partial => 'form' %>

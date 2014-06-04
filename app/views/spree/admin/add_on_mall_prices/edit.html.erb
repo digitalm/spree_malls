@@ -1,0 +1,57 @@
+<%= render :partial => 'spree/admin/shared/product_sub_menu' %>
+
+<%= render :partial => 'spree/admin/shared/product_tabs', :locals => {:current => 'Add On Mall Price Variants'} %>
+
+<% content_for :page_title do %>
+  <%= t('add_on.add_on_mall_price') %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <li>
+    <%= button_link_to t('add_on.back_to_product_add_on_mall_prices_list'), admin_product_add_on_mall_prices_path, :icon => 'icon-arrow-left' %>
+  </li>  
+<% end %>
+
+<% if @add_on_malls.empty? %>
+  <%= t('add_on.mall_is_not_registered_yet') %><br>
+  <%= link_to t('add_on.please_create_add_on_malls'), new_admin_add_on_mall_path %>
+<% else %>
+  <%= form_tag(admin_product_variant_add_on_mall_prices_path(:variant_id => params[:variant_id]), {method: 'patch', action: 'update'}) do %>
+  <table class='index'>
+    <thead>
+      <tr>
+        <th><%= t("activerecord.attributes.add_on_mall.name") %></th>
+        <th><%= t("activerecord.attributes.add_on_mall_price.amount") %></th>
+        <th><%= t("activerecord.attributes.add_on_mall_price.currency") %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @add_on_malls.each_with_index do |add_on_mall,index| %>
+      <tr class="<%= cycle('odd', 'even') %>">
+      <td class="align-center">
+      <%= hidden_field_tag "[add_on_mall_prices][#{index}][variant_id]", params[:variant_id] %>
+      <%= hidden_field_tag "[add_on_mall_prices][#{index}][add_on_mall_id]", add_on_mall.id %>
+      <%= add_on_mall.name %>
+      </td>
+      <td>
+        <% unless add_on_mall.add_on_mall_prices.blank? %>
+          <%= text_field_tag "[add_on_mall_prices][#{index}][amount]", add_on_mall.add_on_mall_prices.first.amount, :autofocus => true %>
+        <% else %>
+          <%= text_field_tag "[add_on_mall_prices][#{index}][amount]",nil ,:autofocus => true %>
+        <%end%>
+      </td>
+      <td>
+        <% unless add_on_mall.add_on_mall_prices.blank? %>
+          <%= text_field_tag "[add_on_mall_prices][#{index}][currency]", add_on_mall.add_on_mall_prices.first.currency%>
+        <% else %>
+          <%= text_field_tag "[add_on_mall_prices][#{index}][currency]", Spree::Config[:currency] %>
+        <%end%>
+      </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+  <%= submit_tag Spree.t(:update) %>
+  <% end %>
+
+<% end %>

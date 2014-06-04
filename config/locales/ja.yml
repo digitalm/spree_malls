@@ -1,0 +1,29 @@
+ja:
+  add_on:
+    add_on_mall: モール
+    add_on_malls: モール
+    add_on_mall_price: モール価格
+    add_on_mall_prices: モール価格
+    listing_add_on_mall: モール一覧
+    listing_add_on_mall_price: モール価格商品一覧
+    new_add_on_mall: 新規
+    edit_add_on_mall: 編集
+    destroy: 削除
+    add_one: 新規追加
+    back_to_add_on_malls_list: 登録済モール一覧
+    back_to_product_add_on_mall_prices_list: モール価格商品一覧へ戻る
+    mall_is_not_registered_yet: モールが登録されていません
+    please_create_add_on_malls: モールを登録する
+    notice_messages:
+      admin_product_variant_add_on_mall_price_variant_created: モール価格情報を作成しました
+      admin_product_variant_add_on_mall_price_variant_updated: モール価格情報を更新しました
+      admin_product_variant_add_on_mall_price_variant_has_error: エラーが発生しました
+  activerecord:
+    attributes:
+      add_on_mall:
+        name: 名前
+      add_on_mall_price:
+        variant_id: 種類
+        add_on_mall_id: モール
+        amount: 価格
+        currency: 通貨

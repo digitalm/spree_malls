@@ -1,0 +1,29 @@
+en:
+  add_on:
+    add_on_mall: Mall
+    add_on_malls: Malls
+    add_on_mall_price: Mall Price
+    add_on_mall_prices: Mall Prices
+    listing_add_on_mall: Listing Malls
+    listing_add_on_mall_price: Listing Mall Price Products
+    new_add_on_mall: New Mall
+    edit_add_on_mall: Edit Mall
+    destroy: Destroy
+    add_one: Add One
+    back_to_add_on_malls_list: Back To Malls List
+    back_to_product_add_on_mall_prices_list: Back To Mall Prices List
+    mall_is_not_registered_yet: Mall is not registered yet.
+    please_create_add_on_malls: Please create mall.
+    notice_messages:
+      admin_product_variant_add_on_mall_price_variant_created: Mall Variant has been successfully created!
+      admin_product_variant_add_on_mall_price_variant_updated:  Mall Variant has been successfully updated!
+      admin_product_variant_add_on_mall_price_variant_has_error: Cannnot save for invalid data.
+  activerecord:
+    attributes:
+      add_on_mall:
+        name: name
+      add_on_mall_price:
+        variant_id: Variant ID
+        add_on_mall_id: Mall ID
+        amount: amount
+        currency: currency
